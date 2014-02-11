@@ -2,17 +2,18 @@
 import requests
 import json
 
-ciudades = {"1":"Almeria","2":"Cádiz","3":"Córdoba","4":"Granada","5":"Huelva","6":"Jaén","7":"Málaga","8":"Sevilla"}
+ciudades = {"1":"Sevilla","2":"Málaga","3":"Cádiz","4":"Córdoba","5":"Huelva","6":"Granada","7":"Jaén","8":"Almería"}
 
-print """
-1. Almería
-2. Cádiz
-3. Córdoba
-4. Granada
+print 
+"""
+1. Sevilla
+2. Málaga
+3. Cádiz
+4. Córdoba
 5. Huelva
-6. Jaén
-7. Málaga
-8. Sevilla
+6. Granada
+7. Jaén
+8. Almería
 """
 peti = raw_input("¿De que ciudad quieres conoces el tiempo hoy?: ")
 respuesta = requests.get('http://api.openweathermap.org/data/2.5/weather',params={'q':'%s,spain' % ciudades[peti]})
