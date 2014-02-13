@@ -15,9 +15,10 @@ print
 7. Jaen
 8. Almeria
 """
-peti = raw_input("De que ciudad quieres conoces el tiempo hoy?: ")
+peti = raw_input("De que ciudad quieres conocer el tiempo hoy?: ")
 respuesta = requests.get('http://api.openweathermap.org/data/2.5/weather',params={'q':'%s,spain' % ciudades[peti]})
 dicci = json.loads(respuesta.text)
-tempe = dicci["main"]["temp"] - 273
+tempe = dicci["main"]["temp"] 
+tempre = tempe - 273
 
-print "la temperatura actual de",provincias[peti], "es:",tempe, "grados centigrados"
+print "la temperatura actual de %s es de %s ºC" % (ciudades(peti),tempre)  
