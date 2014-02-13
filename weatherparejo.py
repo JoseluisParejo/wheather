@@ -21,4 +21,4 @@ dicci = json.loads(respuesta.text)
 tempe = dicci["main"]["temp"] 
 tempre = tempe - 273
 
-print "la temperatura actual de %s es de %s ºC" % (ciudades(peti),tempre)  
+print "la temperatura actual de %s es de %s C" % (ciudades(peti),tempre)  
